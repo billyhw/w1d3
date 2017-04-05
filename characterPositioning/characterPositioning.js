@@ -12,16 +12,13 @@ var stringInfo = function(string) {
 
   for (var i in array) {
     if (array[i] !== " ") {
-      stringInfo[array[i]] = {
-        count: array.filter(function(x) { return x === array[i] ;}).length,
-        position: []
-      }
+      stringInfo[array[i]] = []
     }
   }
 
   for (var i in array) {
     if (array[i] !== " ") {
-      stringInfo[array[i]].position.push(i);
+      stringInfo[array[i]].push(i);
     }
   }
 
